@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gonzalez Isaias" />
+    <title>Lubricantes</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/st.css" />
+
+    <style>
+      body {
+        background-color: #eae9e5;
+      }
+
+      .card.product-card {
+        margin-top: 1px;
+        background-color: #1a1a1a;
+
+        color: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-size: 0.95rem;
+      }
+
+      .card.product-card:hover {
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+        transform: scale(1.03);
+      }
+
+      @media (max-width: 576px) {
+        .product-title {
+          font-size: 0.9rem;
+        }
+
+        .card-img-top {
+          height: 300px;
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <header></header>
+
+    <div class="container py-5">
+      <h2
+        class="text-dark text-center mb-3"
+        style="
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: 45px;
+          display: flex;
+          align-items: flex-start;
+        "
+      >
+        Lubricantes, fluidos y aditivos
+      </h2>
+      <br />
+      <br />
+
+      <div class="text-end mb-3 d-flex justify-content-end mt-1">
+        <button id="btnOrdenarPrecio" class="btn btn-danger">Ordenar ↑↓</button>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://dcdn-us.mitiendanube.com/stores/002/583/671/products/002-02-0005-7f83014d9f6193c17017183101580233-1024-1024.jpg"
+              class="card-img-top"
+              alt="Lubricantes51"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                ACEITE MOTUL 5100 SEMISINTETICO 10W40 X 1 LITRO
+              </h5>
+              <p class="text-white mb-2">$17.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/productos-tienda-27-60e6421e920e0ffef217291893827193-1024-1024.jpg
+              "
+              class="card-img-top"
+              alt="Lubricanteslu"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                ACEITE LUBRAX 4T 20W50 PETROBAS
+              </h5>
+              <p class="text-white mb-2">$5.900</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/productos-tienda-25-d00be9fd84c91bd88117291889838069-1024-1024.webp"
+              class="card-img-top"
+              alt="Lubricantesst"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                ACEITE-MOTUL 5000 20W50 SEMI-SINTETICO 4T
+              </h5>
+              <p class="text-white mb-2">$13.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/productos-tienda-13-dac83edb528814973017291832963226-1024-1024.webp"
+              class="card-img-top"
+              alt="Lubricantesy"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                ACEITE LUBRICANTE YAMALUBE 4T 20W40 YAMAHA OFICIAL
+              </h5>
+              <p class="text-white mb-2">$14.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/2-67127c7283aa5325e517356575768188-1024-1024.webp"
+              class="card-img-top"
+              alt="grasa"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">GRASA P/CADENA JARAMA</h5>
+              <p class="text-white mb-2">$4.600</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/2-0346e095cfd90e9e5d17356543341955-1024-1024.webp"
+              class="card-img-top"
+              alt="grasam"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">GRASA P/CADENA MATCH1</h5>
+              <p class="text-white mb-2">$9.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/2-a7cb90e626399d74e417356562905147-1024-1024.webp"
+              class="card-img-top"
+              alt="grasaw"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">GRASA P/CADENA W80</h5>
+              <p class="text-white mb-2">$16.420</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcTRNGsn4xg8eEyj-A2um7bePjb1itfbfH2-W8cMpfNuturEaFX6zwVNpzRM2cBTMKu7MMGep2TvlPON0cd-NDU7_sfllZIIDYKdkl_nmmwrJfI5-F-hrDzw
+              "
+              class="card-img-top"
+              alt="Lubricantesp"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                LUBRICANTE P/CADENA PENETRIT
+              </h5>
+              <p class="text-white mb-2">$11.000</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/compatible-keller-motomel-gilera-zanella-mondial-corven-2025-06-04t135104-023-f4abf46af4a313c5dc17490558613459-1024-1024.png
+              "
+              class="card-img-top"
+              alt="kitw"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                KIT DE TRANSMICION PARA MOTO 110CC WOLVER 4T
+              </h5>
+              <p class="text-white mb-2">$26.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/compatible-keller-motomel-gilera-zanella-mondial-corven-2025-06-04t094223-507-0ba38d6fc1be1d6a4217490476758695-1024-1024.png
+              "
+              class="card-img-top"
+              alt="kit110"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                KIT DE TRANSMICION PARA MOTO 110CC
+              </h5>
+              <p class="text-white mb-2">$25.000</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/kit-service-wega-motul-honda-tornado-250cc-3c7dd3b5660b2ae76417291741161087-1024-1024.webp"
+              class="card-img-top"
+              alt="kittor"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                KIT SERVICE WEGA+MOTUL HONDA TORNADO 250CC
+              </h5>
+              <p class="text-white mb-2">$6.900</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/kit-service-wega-motul-bajaj-rouser-200ns-ada837f5b5f7d940b317291764147107-1024-1024.webp"
+              class="card-img-top"
+              alt="kitrou"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                KIT SERVICE WEGA+MOTUL BAJAJ ROUSER 200NS
+              </h5>
+              <p class="text-white mb-2">$10.420</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let ascendente = true;
+
+      document
+        .getElementById("btnOrdenarPrecio")
+        .addEventListener("click", () => {
+          const contenedor = document.querySelector(".row.g-4"); // Contenedor de las cards
+          const productos = Array.from(contenedor.children);
+
+          productos.sort((a, b) => {
+            const precioA = parseFloat(
+              a
+                .querySelector("p")
+                .textContent.replace(/[$.]/g, "")
+                .replace(",", ".")
+            );
+            const precioB = parseFloat(
+              b
+                .querySelector("p")
+                .textContent.replace(/[$.]/g, "")
+                .replace(",", ".")
+            );
+            return ascendente ? precioA - precioB : precioB - precioA;
+          });
+
+          productos.forEach((card) => contenedor.appendChild(card));
+
+          ascendente = !ascendente;
+          document.getElementById(
+            "btnOrdenarPrecio"
+          ).textContent = `Ordenar por precio (${
+            ascendente ? "Ascendente" : "Descendente"
+          })`;
+        });
+    </script>
+  </body>
+</html>

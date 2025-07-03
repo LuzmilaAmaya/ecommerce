@@ -1,0 +1,10 @@
+.container{
+    background-color: aqua;
+    
+}
+.card{
+    background-color: pink;
+     height: 100%;
+     min-height: 480px;
+     max-width: 480px;
+}

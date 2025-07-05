@@ -1,11 +1,23 @@
-
-.card{
-    margin-top: 40px;
-     height: 100%;
-     min-height: 480px;
-     max-width: 400px;
-     transition: ease;
+.card {
+    margin: 40px auto; /* Centrada horizontalmente */
+    height: 100%;
+    min-height: 480px;
+    max-width: 400px;
+    width: 90%; /* Se adapta al tamaño del contenedor */
+    transition: transform 0.3s ease;
+    box-sizing: border-box;
 }
-.card:hover{
+
+.card:hover {
     transform: scale(1.01);
+}
+
+/* Responsividad adicional para pantallas pequeñas */
+@media (max-width: 600px) {
+    .card {
+        min-height: 400px;
+        max-width: 100%;
+        width: 95%;
+        margin: 20px auto;
+    }
 }

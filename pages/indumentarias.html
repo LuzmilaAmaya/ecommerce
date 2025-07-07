@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gonzalez Isaias" />
+    <title>Indumentaria</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/st.css" />
+
+    <style>
+      body {
+        background-color: #eae9e5;
+      }
+
+      .card.product-card {
+        margin-top: 1px;
+        background-color: #1a1a1a;
+
+        color: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-size: 0.95rem;
+      }
+
+      .card.product-card:hover {
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+        transform: scale(1.03);
+      }
+
+      @media (max-width: 576px) {
+        .product-title {
+          font-size: 0.9rem;
+        }
+
+        .card-img-top {
+          height: 200px;
+        }
+      }
+
+      .btn-ver-mas {
+        background-color: #ff9900;
+        color: white;
+        border: none;
+        padding: 0.4rem 0.8rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
+
+      .btn-ver-mas:hover {
+        background-color: #e68a00;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <header class="position-sticky top-0 z-3"></header>
+
+    <div class="container py-5">
+      <h2
+        class="text-dark text-center mb-3"
+        style="
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: 45px;
+          display: flex;
+          justify-content: start;
+        "
+      >
+        Indumentaria y Accesorios
+      </h2>
+      <br />
+      <br />
+      <div class="text-end mb-3 d-flex justify-content-end mt-1">
+        <button id="btnOrdenarPrecio" class="btn btn-danger">Ordenar ↑↓</button>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/1-335538c32a03570cb217465537440380-1024-1024.png"
+              class="card-img-top"
+              alt="BAULG"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Baul Givi Trasero Topcase 42lts Trekker Outback
+              </h5>
+              <p class="text-white mb-2">$1.017.000</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/d_nq_np_2x_749174-mla75549740982_042024-f-2e25681b18d6951d6d17350555157501-1024-1024.webp"
+              class="card-img-top"
+              alt="GIVI22"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Maletas Laterales Givi Juego 22 Lts
+              </h5>
+              <p class="text-white mb-2">$585.900</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/compatible-keller-motomel-gilera-zanella-mondial-corven-7-0fadab24d67585070417418769395155-1024-1024.png"
+              class="card-img-top"
+              alt="EVOC"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Casco Cross Enduro Ls2 Mx 700 Evo Cargo
+              </h5>
+              <p class="text-white mb-2">$444.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/compatible-keller-motomel-gilera-zanella-mondial-corven-12-4c2ad99045255e00b017418846656494-1024-1024.png"
+              class="card-img-top"
+              alt="LS2"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Casco Abierto Negro Con Visor Ls2 599 Spitfire
+              </h5>
+              <p class="text-white mb-2">$357.600</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/1-955824f6cf9d951b5317455485145422-1024-1024.png"
+              class="card-img-top"
+              alt="CASCOMT"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Casco MT Atom Skill A1 Mate
+              </h5>
+              <p class="text-white mb-2">$354.600</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/1-5c27034d628b8e0c2217465691969564-1024-1024.png"
+              class="card-img-top"
+              alt="CDV"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Casco Moto Doble Visor Mac Speed 2.0 Tame
+              </h5>
+              <p class="text-white mb-2">$305.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/compatible-keller-motomel-gilera-zanella-mondial-corven-2025-05-21t150343-598-e55fd114dff90ecb6a17478508337185-1024-1024.png
+              "
+              class="card-img-top"
+              alt="GNT"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Guantes NineToone Zip Marrón Aplica touch Screen
+              </h5>
+              <p class="text-white mb-2">$184.145</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/compatible-keller-motomel-gilera-zanella-mondial-corven-2025-05-21t124933-733-d56be24fb8c0adafb917478469395499-1024-1024.png
+              "
+              class="card-img-top"
+              alt="GNTN"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Guantes NineToone Windb Evo Negro
+              </h5>
+              <p class="text-white mb-2">$120.000</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/compatible-keller-motomel-gilera-zanella-mondial-corven-2025-06-30t125248-960-9ffdadb7fc0f45758217512987844806-1024-1024.png
+              "
+              class="card-img-top"
+              alt="CALZA"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Calza Térmica Primera Piel Negro Nto
+              </h5>
+              <p class="text-white mb-2">$70.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/1-d22d5a7d81bb583beb17361876830437-1024-1024.png"
+              class="card-img-top"
+              alt="CAPA"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Capa para lluvia impermeable
+              </h5>
+              <p class="text-white mb-2">$14.856</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/compatible-keller-motomel-gilera-zanella-mondial-corven-2025-06-30t161611-659-e89d3ecf06f927e71f17513109109261-1024-1024.png
+              "
+              class="card-img-top"
+              alt="MASC"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Pasamontaña Mascarilla Frío invierno
+              </h5>
+              <p class="text-white mb-2">$5.769</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/1-36cd2c600b8bbea27d17382499853115-1024-1024.png"
+              class="card-img-top"
+              alt="KITRE"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Kit Reparacion De Cubierta Moto/Auto s/Camara
+              </h5>
+              <p class="text-white mb-2">$3.150</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer></footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let ascendente = true;
+
+      document
+        .getElementById("btnOrdenarPrecio")
+        .addEventListener("click", () => {
+          const contenedor = document.querySelector(".row.g-4"); // Contenedor de las cards
+          const productos = Array.from(contenedor.children);
+
+          productos.sort((a, b) => {
+            const precioA = parseFloat(
+              a
+                .querySelector("p")
+                .textContent.replace(/[$.]/g, "")
+                .replace(",", ".")
+            );
+            const precioB = parseFloat(
+              b
+                .querySelector("p")
+                .textContent.replace(/[$.]/g, "")
+                .replace(",", ".")
+            );
+            return ascendente ? precioA - precioB : precioB - precioA;
+          });
+
+          productos.forEach((card) => contenedor.appendChild(card));
+
+          ascendente = !ascendente;
+          document.getElementById(
+            "btnOrdenarPrecio"
+          ).textContent = `Ordenar por precio (${
+            ascendente ? "Ascendente" : "Descendente"
+          })`;
+        });
+    </script>
+  </body>
+</html>

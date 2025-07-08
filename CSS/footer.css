@@ -1,0 +1,66 @@
+footer {
+  background-color: #0d1b2a; /* Azul oscuro */
+  color: #ffffff;
+  padding: 40px 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+.contenedor1 {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+.box1,
+.box2 {
+  flex: 1 1 300px;
+  margin: 10px;
+}
+h4 {
+  font-size: 18px;
+  margin-bottom: 15px;
+  color: #ffd700; /* Dorado */
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+  display: block;
+  margin-bottom: 10px;
+  transition: color 0.3s;
+}
+a:hover {
+  color: #00b4d8; /* Celeste */
+}
+.iconos-pago {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+.iconos-pago img {
+  width: 60px;
+  height: auto;
+  object-fit: contain;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+/* Responsive: móviles */
+@media (max-width: 768px) {
+  .contenedor1 {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box1,
+  .box2 {
+    width: 100%;
+    text-align: center;
+  }
+  .iconos-pago {
+    justify-content: center;
+  }
+}

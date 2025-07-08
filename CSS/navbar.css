@@ -14,9 +14,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-image: url(https://www.shutterstock.com/image-vector/abstract-sporty-background-exclusive-colors-260nw-2544561291.jpg);
+  background-image: url(https://png.pngtree.com/background/20220731/original/pngtree-racing-background-abstract-stripes-with-baby-blue-black-grey-and-white-picture-image_1913686.jpg);
   background-size: 100%;
-  background-position: 1px;
+  background-position: 100%;
   padding: 30px 30px;
   position: fixed;
   width: 100%;
@@ -26,7 +26,7 @@ body {
 .logo {
   font-size: 24px;
   color: rgb(5, 5, 5);
-  font-weight: bold;
+  font-family: 'Franklin Gothic Medium';
 }
 
 .links {
@@ -37,7 +37,7 @@ body {
 }
 
 .links a {
-  color: rgb(253, 253, 255);
+  color: rgb(6, 2, 148);
   text-decoration: none;
   font-weight: bold;
 }

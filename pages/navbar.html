@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pag Ecommerse</title>
+    <link rel="stylesheet" href="../CSS/navbar.css" />
+    <link
+      rel="shortcut icon"
+      href="https://us.123rf.com/450wm/alexeyko/alexeyko1612/alexeyko161200004/69008211-motocross-enduro-background-silhouette-of-a-man-who-rides-on-a-motorbike-vector-illustration.jpg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <div class="logo">
+          <img
+            src="./MotosRCD-removebg-preview (1).png"
+            alt="logo MotosRCD"
+            width="100px"
+            height="100px"
+          />
+        </div>
+        <ul class="links">
+          <li><a href="./navbar.html">Inicio</a></li>
+          <li><a href="#categoria">Categoria</a></li>
+          <li><a href="#destacado">Destacados</a></li>
+          <li><a href="#accesorio">Accesorios</a></li>
+          <li><a href="./ofertas.html">Ofertas</a></li>
+        </ul>
+        <div class="seccion-botones">
+          <label for="modal-toggle" class="boton-iniciarsesion"
+            >Iniciar sesión</label
+          >
+          <label for="modal-toggle-registro" class="boton-registro"
+            >Registrarse</label
+          >
+        </div>
+      </nav>
+    </header>
+
+    <!-- Secciones para probar scroll automatico-->
+    <!-- <section id="inicio" class="section">Inicio</section>
+    <section id="categoria" class="section">Categoria</section>
+    <section id="destacado" class="section">Destacados</section>
+    <section id="accesorio" class="section">Accesorios</section>
+    <section id="ofertas" class="section">Ofertas</section>
+    <section id="nuestrasmarcas" class="section">Nuestras Marcas</section> -->
+    <!-- <label for="modal-toggle" class="boton-test-ride">Iniciar sesión</label> BOTON DE PRUEBA -->
+    <!-- <input type="checkbox" id="modal-toggle" hidden />
+    <input type="checkbox" id="modal-toggle-registro" hidden /> -->
+
+    <!-- Checkbox para Iniciar sesión -->
+    <input type="checkbox" id="modal-toggle" hidden />
+    <div class="modal" id="modal-login">
+      <div class="modal-content">
+        <label for="modal-toggle" class="boton-cerrar">&times;</label>
+        <h2>Iniciar Sesión</h2>
+        <form action="./navbar.html" method="get">
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            maxlength="40"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            minlength="8"
+            maxlength="25"
+            required
+          />
+          <button type="submit">Ingresar</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Checkbox para Registrarse -->
+    <input type="checkbox" id="modal-toggle-registro" hidden />
+    <div class="modal" id="modal-registro">
+      <div class="modal-content">
+        <label for="modal-toggle-registro" class="boton-cerrar">&times;</label>
+        <h2>Registrarse</h2>
+        <form action="./navbar.html" method="get">
+          <input
+            type="text"
+            placeholder="Nombre completo"
+            maxlength="25"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            maxlength="40"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            minlength="8"
+            maxlength="25"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Confirmar contraseña"
+            minlength="8"
+            maxlength="25"
+            required
+          />
+          <button type="submit">Crear cuenta</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

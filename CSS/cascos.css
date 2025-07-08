@@ -1,0 +1,53 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  padding: 1rem;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Mantener el orden, tamaño fluido de cada div */
+.parent > div {
+  width: 100%;
+  max-width: 400px;
+  flex: 1 1 300px;
+}
+
+/* Imágenes fluidas */
+.parent img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto visual al pasar el mouse */
+.parent img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgb(16, 16, 196);
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 500px) {
+  .parent > div {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

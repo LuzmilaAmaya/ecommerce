@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #b2b9cf;
+  padding: 10px 10px;
+
+  width: 100%;
+  z-index: 1000;
+}
+.logo {
+  font-size: 24px;
+  color: blue;
+  font-weight: bold;
+}
+.links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.links a {
+  color: rgb(15, 98, 192);
+  text-decoration: none;
+  font-weight: bold;
+}
+.links a:hover {
+  color: rgb(7, 9, 100);
+}
+/* Secciones para hacer scroll */
+.section {
+  height: 100vh;
+  padding-top: 100px; /* para que no se tapen con el navbar */
+}
+/* Boton de inicio de sesion */
+.boton-iniciarsesion {
+  background-color: rgb(25, 0, 255);
+  color: white;
+  padding: 10px 18px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.boton-iniciarsesion:hover {
+  background-color: rgb(27, 134, 148);
+}
+/* Botón de registro */
+.boton-registro {
+  background-color: #03043b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.boton-registro:hover {
+  background-color: #777;
+}
+/* Fondo del modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+/* Contenido del modal */
+.modal-content {
+  background-color: #fff;
+  color: #000;
+  padding: 30px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  position: relative;
+}
+/* Botón para cerrar modal (X) */
+.boton-cerrar {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: #000;
+  cursor: pointer;
+}
+/* Formulario */
+.modal-content form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 20px;
+}
+.modal-content input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.modal-content button {
+  padding: 10px;
+  background-color: rgb(0, 17, 73);
+  color: white;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.modal-content button:hover {
+  background-color: rgb(0, 17, 73);
+}
+/* Me muestra el modal cuando el checkbox está activado */
+#modal-toggle:checked ~ #modal-login {
+  display: flex;
+  max-height: none;
+}
+#modal-toggle-registro:checked ~ #modal-registro {
+  display: flex;
+  max-height: none;
+}
+.session-buttons {
+  display: flex;
+  gap: 10px;
+}
+/* Mostrar los modals según su toggle */
+#modal-toggle-login:checked ~ #modal-login,
+#modal-toggle-registro:checked ~ #modal-registro {
+  display: flex;
+  max-height: none;
+}
+/* Ícono hamburguesa */
+.menu-icon {
+  display: none;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+  .links,
+  .seccion-botones {
+    display: none;
+    flex-direction: column;
+    background-color: #443a3a;
+    width: 100%;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    z-index: 999;
+  }
+  /* Mostrar menú cuando está activo */
+  #menu-toggle:checked + .menu-icon + .links {
+    display: flex;
+  }
+  #menu-toggle:checked + .menu-icon + .links + .seccion-botones {
+    display: flex;
+  }
+  .links li {
+    text-align: center;
+    padding: 10px 0;
+  }
+  .seccion-botones {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .btn {
+    width: 90%;
+    text-align: center;
+    margin: 0.25rem 0;
+  }
+  /* .boton-iniciarsesion,
+        .boton-registro {
+          width: 100%;
+          text-align: center;
+          font-size: 14px;
+          padding: 10px;
+        }
+        .modal-content {
+          width: 90%;
+          max-width: 320px;
+        } */
+}
+/* .card {
+  margin-top: 40px;
+  height: 100%;
+  min-height: 350px;
+  max-width: 250px;
+  transition: ease;
+}
+.card:hover {
+  transform: scale(1.01);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+} */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+header {
+  padding: 1rem;
+}
+
+.parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Mantener el orden, tamaño fluido de cada div */
+.parent > div {
+  width: 100%;
+  max-width: 175px;
+  flex: 1 1 300px;
+}
+
+/* Imágenes fluidas */
+.parent img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+/* Efecto visual al pasar el mouse */
+.parent img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgb(16, 16, 196);
+}
+
+/* Media query para pantallas muy pequeñas */
+@media (max-width: 500px) {
+  .parent > div {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Gonzalez Isaias" />
+    <title>Cosmetica</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/CSS/navbar.css" />
+    <link rel="stylesheet" href="/CSS/footer.css" />
+
+    <style>
+      body {
+        background-color: #eae9e5;
+      }
+
+      .card.product-card {
+        margin-top: 1px;
+        background-color: #1a1a1a;
+
+        color: white;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        font-size: 0.95rem;
+      }
+
+      .card.product-card:hover {
+        box-shadow: 0 0 12px rgba(255, 255, 255, 0.2);
+        transform: scale(1.03);
+      }
+
+      @media (max-width: 576px) {
+        .product-title {
+          font-size: 0.9rem;
+        }
+
+        .card-img-top {
+          height: 200px;
+        }
+      }
+
+      .btn-ver-mas {
+        background-color: #ff9900;
+        color: white;
+        border: none;
+        padding: 0.4rem 0.8rem;
+        border-radius: 8px;
+        font-size: 0.9rem;
+      }
+
+      .btn-ver-mas:hover {
+        background-color: #e68a00;
+      }
+    </style>
+  </head>
+
+  <body class="bg-light">
+    <header class="bg-dark">
+      <nav class="navbar">
+        <div class="logo">MOTOS RCD</div>
+        <input type="checkbox" id="menu-toggle" hidden />
+        <label for="menu-toggle" class="menu-icon">☰</label>
+        <ul class="links">
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#categoria">Categoria</a></li>
+          <li><a href="#destacado">Destacados</a></li>
+          <li><a href="#accesorio">Accesorios</a></li>
+          <li><a href="#ofertas">Ofertas</a></li>
+          <li><a href="#nuestrasmarcas">Nuestras Marcas</a></li>
+        </ul>
+        <div class="seccion-botones">
+          <label for="modal-toggle" class="boton-iniciarsesion"
+            >Iniciar sesión</label
+          >
+          <label for="modal-toggle-registro" class="boton-registro"
+            >Registrarse</label
+          >
+        </div>
+      </nav>
+    </header>
+    <!-- Secciones para probar scroll automatico-->
+    <!-- <section id="inicio" class="section">Inicio</section>
+    <section id="categoria" class="section">Categoria</section>
+    <section id="destacado" class="section">Destacados</section>
+    <section id="accesorio" class="section">Accesorios</section>
+    <section id="ofertas" class="section">Ofertas</section>
+    <section id="nuestrasmarcas" class="section">Nuestras Marcas</section> -->
+    <!-- <label for="modal-toggle" class="boton-test-ride">Iniciar sesión</label> BOTON DE PRUEBA -->
+    <!-- <input type="checkbox" id="modal-toggle" hidden />
+    <input type="checkbox" id="modal-toggle-registro" hidden /> -->
+    <!-- Checkbox para Iniciar sesión -->
+    <input type="checkbox" id="modal-toggle" hidden />
+    <div class="modal" id="modal-login">
+      <div class="modal-content">
+        <label for="modal-toggle" class="boton-cerrar">&times;</label>
+        <h2>Iniciar Sesión</h2>
+        <form action="./navbar.html" method="get">
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            maxlength="40"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            minlength="8"
+            maxlength="25"
+            required
+          />
+          <button type="submit">Ingresar</button>
+        </form>
+      </div>
+    </div>
+    <!-- Checkbox para Registrarse -->
+    <input type="checkbox" id="modal-toggle-registro" hidden />
+    <div class="modal" id="modal-registro">
+      <div class="modal-content">
+        <label for="modal-toggle-registro" class="boton-cerrar">&times;</label>
+        <h2>Registrarse</h2>
+        <form action="./navbar.html" method="get">
+          <input
+            type="text"
+            placeholder="Nombre completo"
+            maxlength="25"
+            required
+          />
+          <input
+            type="email"
+            placeholder="Correo electrónico"
+            maxlength="40"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Contraseña"
+            minlength="8"
+            maxlength="25"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Confirmar contraseña"
+            minlength="8"
+            maxlength="25"
+            required
+          />
+          <button type="submit">Crear cuenta</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <h2
+        class="text-dark text-center mb-3"
+        style="
+          font-family: Georgia, 'Times New Roman', Times, serif;
+          font-size: 45px;
+          display: flex;
+          justify-content: start;
+        "
+      >
+        Cosmetica Vehicular
+      </h2>
+      <br />
+      <br />
+
+      <div class="text-end mb-3 d-flex justify-content-end mt-1">
+        <button id="btnOrdenarPrecio" class="btn btn-danger">Ordenar ↑↓</button>
+      </div>
+
+      <div class="row g-4">
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/foto-producto-57-ca11fcab0fcc58604417464917175735-1024-1024.png"
+              class="card-img-top"
+              alt="lpn"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Revividor Resistente al Agua
+              </h5>
+              <p class="text-white mb-2">$76.042</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/productos-tienda-22-aeda82f76e74e50fb217291881033328-1024-1024.jpg"
+              class="card-img-top"
+              alt="GIVI22"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Protectan Aromatizado Fullcar Blanco X5l
+              </h5>
+              <p class="text-white mb-2">$66.029</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/productos-tienda-23-c50d1be20bc20bdb6117291881934360-1024-1024.jpg"
+              class="card-img-top"
+              alt="lpa"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Protectan Aromatizado Crema Fullcar
+              </h5>
+              <p class="text-white mb-2">$59.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/productos-tienda-8-466de8f9e43967a24717291797436004-1024-1024.jpg"
+              class="card-img-top"
+              alt="LS2"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Limpia Tapizados FullCar X5L
+              </h5>
+              <p class="text-white mb-2">$46.600</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/productos-tienda-7-01c939e4f2d3cfb76a17291796588414-1024-1024.jpg"
+              class="card-img-top"
+              alt="CASCOMT"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Revividor de Goma Verde FullCar X5L
+              </h5>
+              <p class="text-white mb-2">$29.600</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/productos-tienda-9-a9798e240ba6fbe31917291797800801-1024-1024.jpg"
+              class="card-img-top"
+              alt="shp"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Shampoo Espuma Activa Fullcar X5L
+              </h5>
+              <p class="text-white mb-2">$27.500</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/productos-tienda-6-5d9ed0a6c30712f07717291796053605-1024-1024.jpg"
+              class="card-img-top"
+              alt="sil"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Silicona Protectant Fullcar Cuero Plasticos 300cm
+              </h5>
+              <p class="text-white mb-2">$6.300</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+          <div class="card product-card h-100 border-1 shadow">
+            <img
+              src="https://acdn-us.mitiendanube.com/stores/004/831/561/products/pad-limpiador-microfibra-unidad-44fab456b25e7393cf17291796875093-1024-1024.jpg"
+              class="card-img-top"
+              alt="pad"
+            />
+            <div class="card-body text-center">
+              <h5 class="product-title text-light">
+                Pad Aplicador Microfibra unidad
+              </h5>
+              <p class="text-white mb-2">$1.950</p>
+              <a href="#" class="btn btn-comprar bg-success">Comprar</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="contenedor1">
+        <div class="box1">
+          <div class="seccion-categorias">
+            <div class="caja-categorias">
+              <h4>CATEGORIAS</h4>
+              <ul>
+                <li>
+                  <a href="#">Inicio </a>
+                </li>
+                <li>
+                  <a href="#">Productos</a>
+                </li>
+                <li>
+                  <a href="#">Ofertas</a>
+                </li>
+              </ul>
+            </div>
+            <div class="seccion-links">
+              <h4>CONTACTANOS</h4>
+              <ul>
+                <li>
+                  <a href="/pages/error.html">+54 9 381 548-0899 </a>
+                </li>
+                <li>
+                  <a href="/pages/error.html">@CascosRollingCD</a>
+                </li>
+                <li>
+                  <a href="https://maps.app.goo.gl/GSZnENP3qwDaQkZ29"
+                    >San Miguel de Tucuman,General paz 576</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="box2">
+          <div class="seccion-pagos">
+            <h4>MEDIOS DE PAGO</h4>
+            <div class="iconos-pago">
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/16/Former_Visa_(company)_logo.svg/3072px-Former_Visa_(company)_logo.svg.png"
+                alt="Visa"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/MasterCard_Logo.svg/2560px-MasterCard_Logo.svg.png"
+                alt="MasterCard"
+              />
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Logo_Naranja.png"
+                alt="Naranja"
+              />
+              <img
+                src="https://d2r9epyceweg5n.cloudfront.net/apps/5576-10-es_AR-600_600%20(1).png"
+                alt="Mercado Pago"
+              />
+              <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5HGOndBWeScpdZmr8mRZDFVGVMa3R01uEEw&s"
+                alt="Pago FÃ¡cil"
+              />
+              <img
+                src="https://www.expensaspagas.com.ar/wp-content/uploads/2020/06/Rapi-Pago-1.png"
+                alt="RapiPago"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      let ascendente = true;
+
+      document
+        .getElementById("btnOrdenarPrecio")
+        .addEventListener("click", () => {
+          const contenedor = document.querySelector(".row.g-4"); // Contenedor de las cards
+          const productos = Array.from(contenedor.children);
+
+          productos.sort((a, b) => {
+            const precioA = parseFloat(
+              a
+                .querySelector("p")
+                .textContent.replace(/[$.]/g, "")
+                .replace(",", ".")
+            );
+            const precioB = parseFloat(
+              b
+                .querySelector("p")
+                .textContent.replace(/[$.]/g, "")
+                .replace(",", ".")
+            );
+            return ascendente ? precioA - precioB : precioB - precioA;
+          });
+
+          productos.forEach((card) => contenedor.appendChild(card));
+
+          ascendente = !ascendente;
+          document.getElementById(
+            "btnOrdenarPrecio"
+          ).textContent = `Ordenar por precio (${
+            ascendente ? "Ascendente" : "Descendente"
+          })`;
+        });
+    </script>
+  </body>
+</html>
